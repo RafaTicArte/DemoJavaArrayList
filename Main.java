@@ -25,18 +25,18 @@ public class Main {
         System.out.println(DAM1);
 
         System.out.println("Removing student by For...");
-        DAM1.removeStudentByFor("María", "Segovia Madrid");
+        DAM1.removeStudentByFor(new Student("María", "Segovia Madrid"));
         System.out.println(DAM1);
 
         /*
         // Exception in thread "main" java.util.ConcurrentModificationException
         System.out.println("Removing student by ForEach...");
-        DAM1.removeStudentByForEach("Juan", "Pérez Pérez");
+        DAM1.removeStudentByForEach(new Student("Juan", "Pérez Pérez"));
         System.out.println(DAM1);
         */
 
         System.out.println("Removing student by Iterator...");
-        DAM1.removeStudentByIterator("Fran", "Rodas Martín");
+        DAM1.removeStudentByIterator(new Student("Fran", "Rodas Martín"));
         System.out.println(DAM1);
     }
 }

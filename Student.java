@@ -13,6 +13,11 @@ public class Student implements Comparable<Student>{
         this.age = 0;
     }
 
+    public Student(String name, String surname){
+        this.name = name;
+        this.surname = surname;
+    }
+
     public Student(String name, String surname, int age){
         this.name = name;
         this.surname = surname;
@@ -50,14 +55,16 @@ public class Student implements Comparable<Student>{
 
     @Override
     public boolean equals(Object obj) {
+        boolean isEquals = false;
         if (this == obj){
-            return true;
+            isEquals = true;
         } else if (obj == null || getClass() != obj.getClass()) {
-            return false;
+            isEquals = false;
         } else {
             Student student = (Student) obj;
-            return Objects.equals(name, student.name) && Objects.equals(surname, student.surname);
+            isEquals = Objects.equals(name, student.name) && Objects.equals(surname, student.surname);
         }
+        return isEquals;
     }
 
     @Override
