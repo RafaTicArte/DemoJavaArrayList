@@ -80,6 +80,7 @@ public class Group {
     }
 
     public void sortStudentsByAge() {
-        students.sort(new Student.AgeComparator());
+        //students.sort(new Student.AgeComparator());
+        Collections.sort(students, new Student.AgeComparator());
     }
 }
